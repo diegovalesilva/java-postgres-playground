@@ -11,5 +11,6 @@ public class AppClasses {
         System.out.println("Renda: " + cliente.getRenda());
         System.out.println("Sexo: " + cliente.getSexo());
         System.out.println("Ano Nascimento: " + cliente.getAnoNascimento());
+        System.out.println("Especial: " + cliente.isEspecial());
     }
 }

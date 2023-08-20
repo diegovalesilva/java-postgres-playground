@@ -4,6 +4,27 @@ public class Cliente{
     private double renda;
     private char sexo;
     private int anoNascimento;
+    private boolean especial;
+
+    public Cliente(){
+        double aleatorio = Math.random();
+        if(aleatorio > 0.5)
+            especial = true;
+    }
+    
+    public Cliente(double renda, char sexo){
+        this();//Chama o construtor da própria classe
+        setRenda(renda);
+        this.sexo = sexo;
+    }
+
+    public boolean isEspecial() {
+        return especial;
+    }
+
+    public void setEspecial(boolean especial) {
+        this.especial = especial;
+    }
 
     public char getSexo() {
         return sexo;
