@@ -5,6 +5,7 @@ public class Cliente{
     private char sexo;
     private int anoNascimento;
     private boolean especial;
+    private String nome;
 
     public Cliente(){
         double aleatorio = Math.random();
@@ -16,6 +17,17 @@ public class Cliente{
         this();//Chama o construtor da própria classe
         setRenda(renda);
         this.sexo = sexo;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        if(nome.isBlank())
+            System.out.println("Nome é obrigatório.");
+        else
+            this.nome = nome.toUpperCase().trim();    
     }
 
     public boolean isEspecial() {
